@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -29,16 +30,16 @@ public class HelloApplication extends Application {
         TableColumn<Student, String> col1 = new TableColumn<>("ID");
         TableColumn<Student, String> col2 = new TableColumn<>("First Name");
         TableColumn<Student, String> col3 = new TableColumn<>("Last Name");
-        TableColumn<Student, String> col4 = new TableColumn<>("Depart,emt");
+        TableColumn<Student, String> col4 = new TableColumn<>("Department");
         TableColumn<Student, String> col5 = new TableColumn<>("Major");
         TableColumn<Student, String> col6 = new TableColumn<>("Email");
 
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
 
         // LeftPane
-        Label profilePic = new Label("Profile Picture");
-        profilePic.setStyle("-fx-font-size: 32px;");
-        VBox leftPane = new VBox();
+        Label profilePic = new Label("O");
+        profilePic.setStyle("-fx-font-size: 48px;");
+        VBox leftPane = new VBox(profilePic);
         leftPane.setPadding(new Insets(10));
 
         // RightPane
@@ -67,7 +68,18 @@ public class HelloApplication extends Application {
 
         rightPane.setPadding(new Insets(10));
 
+        // Layout
+        BorderPane root = new BorderPane();
+        root.setTop(menubar);
+        root.setLeft(leftPane);
+        root.setCenter(table);
+        root.setRight(rightPane);
 
+
+        Scene scene = new Scene(root, 800, 400);
+        stage.setScene(scene);
+        stage.setTitle("Student Details");
+        stage.show();
 
     }
 
