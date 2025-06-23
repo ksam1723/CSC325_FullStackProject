@@ -38,12 +38,12 @@ public class HelloApplication extends Application {
         TableColumn<Student, String> col5 = new TableColumn<>("Major");
         TableColumn<Student, String> col6 = new TableColumn<>("Email");
 
-        col1.setMinWidth(117);
-        col2.setMinWidth(117);
-        col3.setMinWidth(117);
-        col4.setMinWidth(117);
-        col5.setMinWidth(117);
-        col6.setMinWidth(117);
+        col1.setMinWidth(20);
+        col2.setMinWidth(100);
+        col3.setMinWidth(100);
+        col4.setMinWidth(100);
+        col5.setMinWidth(100);
+        col6.setMinWidth(100);
 
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
 
@@ -91,15 +91,27 @@ public class HelloApplication extends Application {
 
         // Make buttons bigger
         for (Button button : new Button[]{clear, add, delete, edit}) {
-            button.setPrefWidth(150);
+            button.setPrefWidth(200);
             button.setPrefHeight(30);
         }
 
-        VBox rightPane = new VBox(10, textFields, spacer, clear, add,
+        VBox rightPane = new VBox(20, textFields, spacer, clear, add,
                 delete, edit);
 
         rightPane.setPadding(new Insets(10));
         rightPane.setId("rightPane");
+        rightPane.setPrefWidth(200);
+
+        // Bottom Bars
+        Region grayBar = new Region();
+        grayBar.setPrefHeight(25);
+        grayBar.setId("grayBar");
+
+        Region brownBar = new Region();
+        brownBar.setPrefHeight(5);
+        brownBar.setId("brownBar");
+
+        VBox bottomPane = new VBox(grayBar, brownBar);
 
         // Layout
         BorderPane root = new BorderPane();
@@ -107,9 +119,10 @@ public class HelloApplication extends Application {
         root.setLeft(leftPane);
         root.setCenter(table);
         root.setRight(rightPane);
+        root.setBottom(bottomPane);
 
 
-        Scene scene = new Scene(root, 1000, 500);
+        Scene scene = new Scene(root, 900, 550);
         stage.setScene(scene);
         stage.setTitle("Student Details");
         stage.show();

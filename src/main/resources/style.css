@@ -38,3 +38,11 @@
 #leftPane {
     -fx-background-color: #b87f31;
 }
+
+#grayBar {
+    -fx-background-color: #a3a3a3;
+}
+
+#brownBar {
+    -fx-background-color: #b87f31;
+}
