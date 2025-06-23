@@ -1,7 +1,6 @@
 package edu.farmingdale.csc325_fullstackproject;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -12,8 +11,6 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
@@ -80,7 +77,7 @@ public class HelloApplication extends Application {
 
         VBox textFields = new VBox(3, firstName, lastName, dept, major, email, imageURL);
 
-        // Creates Space between textFIelds and Buttons
+        // Creates Space between textFields and Buttons
         Region spacer = new Region();
         VBox.setVgrow(spacer, Priority.ALWAYS);
 
@@ -89,7 +86,7 @@ public class HelloApplication extends Application {
         Button delete = new Button("Delete");
         Button edit = new Button("Edit");
 
-        // Make buttons bigger
+        // Make Buttons Bigger
         for (Button button : new Button[]{clear, add, delete, edit}) {
             button.setPrefWidth(200);
             button.setPrefHeight(30);
