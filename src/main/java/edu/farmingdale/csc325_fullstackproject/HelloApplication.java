@@ -112,6 +112,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Student Details");
         stage.show();
 
+        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+
     }
 
     public static class Student {
