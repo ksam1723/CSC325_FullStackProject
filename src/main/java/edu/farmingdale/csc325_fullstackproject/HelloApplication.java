@@ -8,6 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -42,8 +44,8 @@ public class HelloApplication extends Application {
         String imageUrl = "https://i.gyazo.com/536082de1b58edfe55b2315696d8608e.png";
         Image image = new Image(imageUrl, true);
         ImageView imageView = new ImageView(image);
-        imageView.setFitHeight(50);
-        imageView.setFitWidth(50);
+        imageView.setFitHeight(100);
+        imageView.setFitWidth(100);
         imageView.setPreserveRatio(true);
 
         VBox leftPane = new VBox(imageView);
@@ -68,6 +70,12 @@ public class HelloApplication extends Application {
         TextField imageURL = new TextField();
         imageURL.setPromptText("imageURL");
 
+        VBox textFields = new VBox(firstName, lastName, dept, major, email, imageURL);
+
+        // Creates Space between textFIelds and Buttons
+        Region spacer = new Region();
+        VBox.setVgrow(spacer, Priority.ALWAYS);
+
         Button clear = new Button("Clear");
         Button add = new Button("Add");
         Button delete = new Button("Delete");
@@ -79,8 +87,8 @@ public class HelloApplication extends Application {
             button.setPrefHeight(30);
         }
 
-        VBox rightPane = new VBox(10, firstName, lastName,
-                dept, major, email, imageURL, clear, add, delete, edit);
+        VBox rightPane = new VBox(10, textFields, spacer, clear, add,
+                delete, edit);
 
         rightPane.setPadding(new Insets(10));
 
