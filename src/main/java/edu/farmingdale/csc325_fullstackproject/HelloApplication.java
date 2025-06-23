@@ -38,6 +38,13 @@ public class HelloApplication extends Application {
         TableColumn<Student, String> col5 = new TableColumn<>("Major");
         TableColumn<Student, String> col6 = new TableColumn<>("Email");
 
+        col1.setMinWidth(117);
+        col2.setMinWidth(117);
+        col3.setMinWidth(117);
+        col4.setMinWidth(117);
+        col5.setMinWidth(117);
+        col6.setMinWidth(117);
+
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
 
         // LeftPane
