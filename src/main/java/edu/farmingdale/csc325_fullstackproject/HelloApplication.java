@@ -63,6 +63,12 @@ public class HelloApplication extends Application {
         Button delete = new Button("Delete");
         Button edit = new Button("Edit");
 
+        // Make buttons bigger
+        for (Button button : new Button[]{clear, add, delete, edit}) {
+            button.setPrefWidth(150);
+            button.setPrefHeight(30);
+        }
+
         VBox rightPane = new VBox(10, firstName, lastName,
                 dept, major, email, clear, add, delete, edit);
 
