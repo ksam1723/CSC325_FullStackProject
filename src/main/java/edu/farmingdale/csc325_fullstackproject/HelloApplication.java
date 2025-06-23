@@ -11,7 +11,7 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage){
-        // Menu
+        // MenuBar
         MenuBar menubar = new MenuBar();
         menubar.getMenus().addAll(
                 new Menu("File"),
@@ -19,6 +19,18 @@ public class HelloApplication extends Application {
                 new Menu("Theme"),
                 new Menu("Help")
         );
+        // TableView
+        TableView table = new TableView();
+        table.setPlaceholder(new Label("No content in table"));
+
+        TableColumn col1 = new TableColumn("ID");
+        TableColumn col2 = new TableColumn("First Name");
+        TableColumn col3 = new TableColumn("Last Name");
+        TableColumn col4 = new TableColumn("Depart,emt");
+        TableColumn col5 = new TableColumn("Major");
+        TableColumn col6 = new TableColumn("Email");
+
+        table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
 
 
 
