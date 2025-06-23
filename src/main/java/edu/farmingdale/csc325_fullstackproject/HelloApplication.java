@@ -2,8 +2,10 @@ package edu.farmingdale.csc325_fullstackproject;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,7 +33,11 @@ public class HelloApplication extends Application {
         TableColumn<Student, String> col6 = new TableColumn<>("Email");
 
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
-
+        // LeftPane
+        Label profilePic = new Label("Profile Picture");
+        profilePic.setStyle("-fx-font-size: 32px;");
+        VBox leftPane = new VBox();
+        leftPane.setPadding(new Insets(10));
 
     }
 
