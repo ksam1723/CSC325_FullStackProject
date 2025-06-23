@@ -6,6 +6,10 @@
     -fx-text-fill: black;
 }
 
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
 .table-view .column-header-background {
     -fx-background-color: #a3a3a3;
 }
@@ -25,4 +29,12 @@
 .text-field {
     -fx-background-radius: 5;
     -fx-padding: 5 10;
+}
+
+#rightPane {
+    -fx-background-color: #6ce300;
+}
+
+#leftPane {
+    -fx-background-color: #b87f31;
 }

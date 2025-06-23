@@ -57,6 +57,7 @@ public class HelloApplication extends Application {
 
         VBox leftPane = new VBox(imageView);
         leftPane.setPadding(new Insets(10));
+        leftPane.setId("leftPane");
 
         // RightPane
         TextField firstName = new TextField();
@@ -98,6 +99,7 @@ public class HelloApplication extends Application {
                 delete, edit);
 
         rightPane.setPadding(new Insets(10));
+        rightPane.setId("rightPane");
 
         // Layout
         BorderPane root = new BorderPane();
