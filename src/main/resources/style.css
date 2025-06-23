@@ -1,3 +1,28 @@
 .menu-bar {
     -fx-background-color: #994800;
 }
+
+.menu {
+    -fx-text-fill: black;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #a3a3a3;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #b87f31;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-background-radius: 7;
+    -fx-padding: 10 20;
+}
+
+.text-field {
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+}
