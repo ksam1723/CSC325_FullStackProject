@@ -124,7 +124,7 @@ public class HelloApplication extends Application {
 
         Scene scene = new Scene(root, 900, 550);
         stage.setScene(scene);
-        stage.setTitle("Student Details");
+        stage.setTitle("FSC CSC325_Full Stack Project");
         stage.show();
 
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
