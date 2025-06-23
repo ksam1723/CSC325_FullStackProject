@@ -21,6 +21,7 @@ public class HelloApplication extends Application {
                 new Menu("Theme"),
                 new Menu("Help")
         );
+
         // TableView
         TableView<Student> table = new TableView<>();
         table.setPlaceholder(new Label("No content in table"));
@@ -33,11 +34,40 @@ public class HelloApplication extends Application {
         TableColumn<Student, String> col6 = new TableColumn<>("Email");
 
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
+
         // LeftPane
         Label profilePic = new Label("Profile Picture");
         profilePic.setStyle("-fx-font-size: 32px;");
         VBox leftPane = new VBox();
         leftPane.setPadding(new Insets(10));
+
+        // RightPane
+        TextField firstName = new TextField();
+        firstName.setPromptText("First Name");
+
+        TextField lastName = new TextField();
+        lastName.setPromptText("Last Name");
+
+        TextField dept = new TextField();
+        dept.setPromptText("Department");
+
+        TextField major = new TextField();
+        major.setPromptText("Major");
+
+        TextField email = new TextField();
+        email.setPromptText("Email");
+
+        Button clear = new Button("Clear");
+        Button add = new Button("Add");
+        Button delete = new Button("Delete");
+        Button edit = new Button("Edit");
+
+        VBox rightPane = new VBox(10, firstName, lastName,
+                dept, major, email, clear, add, delete, edit);
+
+        rightPane.setPadding(new Insets(10));
+
+
 
     }
 
