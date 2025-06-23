@@ -70,7 +70,7 @@ public class HelloApplication extends Application {
         TextField imageURL = new TextField();
         imageURL.setPromptText("imageURL");
 
-        VBox textFields = new VBox(firstName, lastName, dept, major, email, imageURL);
+        VBox textFields = new VBox(3, firstName, lastName, dept, major, email, imageURL);
 
         // Creates Space between textFIelds and Buttons
         Region spacer = new Region();
@@ -100,7 +100,7 @@ public class HelloApplication extends Application {
         root.setRight(rightPane);
 
 
-        Scene scene = new Scene(root, 800, 400);
+        Scene scene = new Scene(root, 1000, 500);
         stage.setScene(scene);
         stage.setTitle("Student Details");
         stage.show();
