@@ -20,19 +20,22 @@ public class HelloApplication extends Application {
                 new Menu("Help")
         );
         // TableView
-        TableView table = new TableView();
+        TableView<Student> table = new TableView<>();
         table.setPlaceholder(new Label("No content in table"));
 
-        TableColumn col1 = new TableColumn("ID");
-        TableColumn col2 = new TableColumn("First Name");
-        TableColumn col3 = new TableColumn("Last Name");
-        TableColumn col4 = new TableColumn("Depart,emt");
-        TableColumn col5 = new TableColumn("Major");
-        TableColumn col6 = new TableColumn("Email");
+        TableColumn<Student, String> col1 = new TableColumn<>("ID");
+        TableColumn<Student, String> col2 = new TableColumn<>("First Name");
+        TableColumn<Student, String> col3 = new TableColumn<>("Last Name");
+        TableColumn<Student, String> col4 = new TableColumn<>("Depart,emt");
+        TableColumn<Student, String> col5 = new TableColumn<>("Major");
+        TableColumn<Student, String> col6 = new TableColumn<>("Email");
 
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
 
 
+    }
+
+    public static class Student {
 
     }
 
