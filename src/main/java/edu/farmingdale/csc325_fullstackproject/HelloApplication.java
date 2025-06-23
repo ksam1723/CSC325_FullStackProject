@@ -58,6 +58,9 @@ public class HelloApplication extends Application {
         TextField email = new TextField();
         email.setPromptText("Email");
 
+        TextField imageURL = new TextField();
+        imageURL.setPromptText("imageURL");
+
         Button clear = new Button("Clear");
         Button add = new Button("Add");
         Button delete = new Button("Delete");
@@ -70,7 +73,7 @@ public class HelloApplication extends Application {
         }
 
         VBox rightPane = new VBox(10, firstName, lastName,
-                dept, major, email, clear, add, delete, edit);
+                dept, major, email, imageURL, clear, add, delete, edit);
 
         rightPane.setPadding(new Insets(10));
 
