@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -37,9 +39,14 @@ public class HelloApplication extends Application {
         table.getColumns().addAll(col1, col2, col3, col4, col5, col6);
 
         // LeftPane
-        Label profilePic = new Label("O");
-        profilePic.setStyle("-fx-font-size: 48px;");
-        VBox leftPane = new VBox(profilePic);
+        String imageUrl = "https://i.gyazo.com/536082de1b58edfe55b2315696d8608e.png";
+        Image image = new Image(imageUrl, true);
+        ImageView imageView = new ImageView(image);
+        imageView.setFitHeight(50);
+        imageView.setFitWidth(50);
+        imageView.setPreserveRatio(true);
+
+        VBox leftPane = new VBox(imageView);
         leftPane.setPadding(new Insets(10));
 
         // RightPane
